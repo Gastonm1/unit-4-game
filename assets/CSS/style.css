@@ -1,0 +1,75 @@
+body {
+  background-image: url(https://cdn.pixabay.com/photo/2016/06/23/16/07/background-1475670_1280.jpg);
+  font-family: "VT323", monospace;
+}
+
+#Top {
+    display: flex;
+}
+
+.Intro {
+    float: left;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+}
+
+#AstroImg {
+    float: right;
+    min-height: 150px;
+    min-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle 
+}
+
+#Container {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 40%;
+  font-weight: bold;
+  margin: 5px;
+}
+
+#RandNum {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 40%;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#Scoreboard {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 40%;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.Crystals {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+}
+
+img {
+  width: 250px;
+  height: 100px;
+}
+
+.UserContainer {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+  font-weight: bold;
+}
+
+#SpaceBag {
+  background-color: rgba(255, 255, 255, 0.3);
+  float: ;
+}
