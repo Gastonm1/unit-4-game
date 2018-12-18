@@ -8,10 +8,11 @@ body {
 }
 
 .Intro {
-    float: left;
+  float: left;
   display: flex;
   flex-direction: column;
   width: 50%;
+  height: 50%;
   margin: 5px;
   background-color: rgba(255, 255, 255, 0.3);
   font-weight: bold;
@@ -28,18 +29,31 @@ body {
     vertical-align: middle 
 }
 
+img {
+  width: 606px;
+  height: 700px;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+
 #Container {
   display: flex;
   flex-direction: row;
   background-color: rgba(255, 255, 255, 0.3);
-  width: 40%;
+  width: 50%;
   font-weight: bold;
   margin: 5px;
 }
 
 #RandNum {
   background-color: rgba(255, 255, 255, 0.3);
-  width: 40%;
+  width: 50%;
+  margin: 3px;
   font-weight: bold;
   display: flex;
   justify-content: flex-start;
@@ -47,7 +61,8 @@ body {
 
 #Scoreboard {
   background-color: rgba(255, 255, 255, 0.3);
-  width: 40%;
+  width: 50%;
+  margin: 3px;
   font-weight: bold;
   display: flex;
   justify-content: flex-start;
@@ -56,14 +71,11 @@ body {
 .Crystals {
   background-color: rgba(255, 255, 255, 0.3);
   font-weight: bold;
-}
-
-img {
-  width: 250px;
-  height: 100px;
+  width: 50%;
 }
 
 .UserContainer {
+  width: 50%;
   background-color: rgba(255, 255, 255, 0.3);
   font-weight: bold;
   font-weight: bold;
