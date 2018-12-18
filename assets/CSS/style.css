@@ -7,7 +7,7 @@ body {
     display: flex;
 }
 
-.Intro {
+.intro {
   float: left;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@ body {
   font-weight: bold;
 }
 
-#AstroImg {
+#astroImg {
     float: right;
     min-height: 150px;
     min-width: 150px;
@@ -41,7 +41,7 @@ img {
 }
 
 
-#Container {
+#container {
   display: flex;
   flex-direction: row;
   background-color: rgba(255, 255, 255, 0.3);
@@ -50,7 +50,7 @@ img {
   margin: 5px;
 }
 
-#RandNum {
+#randNum {
   background-color: rgba(255, 255, 255, 0.3);
   width: 50%;
   margin: 3px;
@@ -59,7 +59,7 @@ img {
   justify-content: flex-start;
 }
 
-#Scoreboard {
+#scoreboard {
   background-color: rgba(255, 255, 255, 0.3);
   width: 50%;
   margin: 3px;
@@ -68,20 +68,20 @@ img {
   justify-content: flex-start;
 }
 
-.Crystals {
+.crystals {
   background-color: rgba(255, 255, 255, 0.3);
   font-weight: bold;
   width: 50%;
 }
 
-.UserContainer {
+.userContainer {
   width: 50%;
   background-color: rgba(255, 255, 255, 0.3);
   font-weight: bold;
   font-weight: bold;
 }
 
-#SpaceBag {
+#spaceBag {
   background-color: rgba(255, 255, 255, 0.3);
   float: ;
 }
