@@ -29,7 +29,7 @@ body {
     vertical-align: middle 
 }
 
-img {
+#astroPic {
   width: 606px;
   height: 700px;
   animation-name: floating;
@@ -46,6 +46,7 @@ img {
   flex-direction: row;
   background-color: rgba(255, 255, 255, 0.3);
   width: 50%;
+  height: 50px;
   font-weight: bold;
   margin: 5px;
 }
@@ -68,11 +69,54 @@ img {
   justify-content: flex-start;
 }
 
-.crystals {
-  background-color: rgba(255, 255, 255, 0.3);
-  font-weight: bold;
+#crystalContainer{
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
   width: 50%;
 }
+
+.blueCrystal {
+  border: 1px solid green;
+  height: 100px;
+  width: 200px;
+}
+
+#bluegem {
+  height: 100px;
+}
+
+.greenCrystal {
+  border: 1px solid green;
+  height: 100px;
+  width: 200px;
+}
+
+#greengem {
+  height: 100px;
+}
+
+.purpleCrystal {
+  border: 1px solid green;
+  height: 100px;
+  width: 200px;
+}
+
+#purplegem {
+  height: 100px;
+}
+
+.redCrystal {
+  border: 1px solid green;
+  height: 100px;
+  width: 200px;
+}
+
+#redgem {
+  height: 100px;
+}
+
 
 .userContainer {
   width: 50%;
