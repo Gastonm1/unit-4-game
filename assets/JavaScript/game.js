@@ -10,6 +10,7 @@
 var randResult;
 var losses = 0;
 var wins = 0;
+var previous = 0;
 //=================================================================================================================
 
 // Initialization
@@ -34,19 +35,20 @@ function init() {
 
   //User Click
   $("#bluegem").on("click", function() {
-    console.log($(this).attr("data-random-number"));
+    var num = parseInt($(this).attr("data-random-number"));
   });
 
   $("#greenegem").on("click", function() {
-    console.log($(this).attr("data-random-number"));
+    var num = ($(this).attr("data-random-number"));
+    previous += num;
   });
 
   $("#purplegem").on("click", function() {
-    console.log($(this).attr("data-random-number"));
+    var num = ($(this).attr("data-random-number"));
   });
 
   $("#redgem").on("click", function() {
-    console.log($(this).attr("data-random-number"));
+    var num = ($(this).attr("data-random-number"));
   });
 
   init();
