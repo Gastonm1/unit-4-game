@@ -7,18 +7,22 @@
 // If it is equal, then add one win to the win counter, then reset
 
 //==================GLOBAL VARIABLES===============================================================================
-var total;
+var randResult;
 var losses = 0;
 var wins = 0;
 //=================================================================================================================
 
 // Initialization
 
+randResult = Math.floor(Math.random() * 101) + 19;
+//console.log(randResult);
+$("#result").html("NASA needs you to gather " + randResult + " crystals!");
+
 function init() {
-  var random1 = Math.floor(Math.random() * 12);
-  var random2 = Math.floor(Math.random() * 12);
-  var random3 = Math.floor(Math.random() * 12);
-  var random4 = Math.floor(Math.random() * 12);
+  var random1 = Math.floor(Math.random() * 11) + 1;
+  var random2 = Math.floor(Math.random() * 11) + 1;
+  var random3 = Math.floor(Math.random() * 11) + 1;
+  var random4 = Math.floor(Math.random() * 11) + 1;
 
   $("#bluegem").attr("data-random-number", random1);
 
@@ -27,8 +31,23 @@ function init() {
   $("#purplegem").attr("data-random-number", random3);
 
   $("#redgem").attr("data-random-number", random4);
+
+  //User Click
+  $("#bluegem").on("click", function() {
+    console.log($(this).attr("data-random-number"));
+  });
+
+  $("#greenegem").on("click", function() {
+    console.log($(this).attr("data-random-number"));
+  });
+
+  $("#purplegem").on("click", function() {
+    console.log($(this).attr("data-random-number"));
+  });
+
+  $("#redgem").on("click", function() {
+    console.log($(this).attr("data-random-number"));
+  });
+
+  init();
 }
-
-init();
-
-$(".bluecrystal").click()
