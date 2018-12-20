@@ -16,11 +16,11 @@ $(document).ready(function() {
 
   // Initialization
   function init() {
-  randResult = Math.floor(Math.random() * 101) + 19;
-  //console.log(randResult);
-  $("#result").text("NASA needs you to gather " + randResult + " crystals!");
-  //console.log(randResult);
-  
+    randResult = Math.floor(Math.random() * 101) + 19;
+    //console.log(randResult);
+    $("#result").text("NASA needs you to gather " + randResult + " crystals!");
+    //console.log(randResult);
+
     var random1 = Math.floor(Math.random() * 11) + 1;
     var random2 = Math.floor(Math.random() * 11) + 1;
     var random3 = Math.floor(Math.random() * 11) + 1;
@@ -71,14 +71,13 @@ $(document).ready(function() {
 
   if (previous > randResult) {
     losses++;
-    console.log("You lost!");
+    //console.log("You lost!");
     $("#losses").text("Unsucessful Mining Days " + losses);
 
     init();
-  } 
-  else if (previous === randResult) {
+  } else if (previous === randResult) {
     wins++;
-    console.log("You Win!")
+    console.log("You Win!");
     $("#wins").text("Sucessful Mining Days " + wins);
 
     init();
