@@ -43,14 +43,15 @@ $(document).ready(function() {
       losses++;
       //console.log("You lost!");
       $("#losses").text("Unsucessful Mining Days " + losses);
-
+      previous = 0;
       init();
     } else if (previous === randResult) {
       wins++;
       //console.log("You Win!");
       $("#wins").text("Sucessful Mining Days " + wins);
-
+      previous = 0;
       init();
+
     }
   }
   init();
@@ -88,4 +89,5 @@ $(document).ready(function() {
     $("#spaceBag").html("Crystals in your spacebag: " + previous);
     checkWinLosses();
   });
+  init();
 });
