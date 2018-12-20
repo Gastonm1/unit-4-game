@@ -17,9 +17,17 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
   font-weight: bold;
 }
-
+@-webkit-keyframes astro_float {
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 55px;
+  }
+}
 #astroImg {
   float: right;
+  position: relative;
   min-height: 150px;
   min-width: 150px;
   margin-left: auto;
@@ -27,11 +35,12 @@ body {
   text-align: center;
   display: table-cell;
   vertical-align: middle;
+  -webkit-animation: astro_float ease 5s infinite;
 }
 
 #astroPic {
   width: 606px;
-  height: 700px;
+  height: 650px;
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
