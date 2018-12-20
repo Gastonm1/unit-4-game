@@ -5,64 +5,82 @@
 // if it is greater than total, then we increment the loss counter; then reset
 // If it is equal, then add one win to the win counter, then reset
 // A new number needs to be generated to each crystal every time user Wins or Loses
+$(document).ready(function() {
+  //==================GLOBAL VARIABLES===============================================================================
+  var randResult;
+  var losses = 0;
+  var wins = 0;
+  var previous = 0;
 
-//==================GLOBAL VARIABLES===============================================================================
-var randResult;
-var losses = 0;
-var wins = 0;
-var previous = 0;
-//=================================================================================================================
+  //=================================================================================================================
 
-// Initialization
+  // Initialization
+  function init() {
+  randResult = Math.floor(Math.random() * 101) + 19;
+  //console.log(randResult);
+  $("#result").text("NASA needs you to gather " + randResult + " crystals!");
+  //console.log(randResult);
+  
+    var random1 = Math.floor(Math.random() * 11) + 1;
+    var random2 = Math.floor(Math.random() * 11) + 1;
+    var random3 = Math.floor(Math.random() * 11) + 1;
+    var random4 = Math.floor(Math.random() * 11) + 1;
 
-randResult = Math.floor(Math.random() * 101) + 19;
-//console.log(randResult);
-$("#result").html("NASA needs you to gather " + randResult + " crystals!");
+    $("#bluegem").attr("data-random-number", random1);
 
-function init() {
-  var random1 = Math.floor(Math.random() * 11) + 1;
-  var random2 = Math.floor(Math.random() * 11) + 1;
-  var random3 = Math.floor(Math.random() * 11) + 1;
-  var random4 = Math.floor(Math.random() * 11) + 1;
+    $("#greengem").attr("data-random-number", random2);
 
-  $("#bluegem").attr("data-random-number", random1);
+    $("#purplegem").attr("data-random-number", random3);
 
-  $("#greengem").attr("data-random-number", random2);
-
-  $("#purplegem").attr("data-random-number", random3);
-
-  $("#redgem").attr("data-random-number", random4);
-
-  //User Click
-  $("#bluegem").on("click", function() {
-    var num1 = parseInt($(this).attr("data-random-number"));
-    previous += num;
-
-    if (previous > randResult) {
-      losses--;
-      //console.log("You lost!");
-      $("#Losses").html("Unsucessful Mining Days " + losses);
-    } else if (previouos === randResult) {
-      wins++;
-      //console.log("You Win!")
-      $("#wins").html("Sucessful Mining Days " + wins);
-    }
-  });
-
-  $("#greenegem").on("click", function() {
-    var num2 = $(this).attr("data-random-number");
-    previous += num;
-  });
-
-  $("#purplegem").on("click", function() {
-    var num3 = $(this).attr("data-random-number");
-    previous += num;
-  });
-
-  $("#redgem").on("click", function() {
-    var num4 = $(this).attr("data-random-number");
-    previous += num;
-  });
+    $("#redgem").attr("data-random-number", random4);
+  }
 
   init();
-}
+
+  //User Click
+
+  $(document).on("click", "#bluegem", function() {
+    var num = parseInt($(this).attr("data-random-number"));
+    previous += num;
+    console.log(previous);
+    $("#spaceBag").html("Crystals in your spacebag: " + previous);
+  });
+
+  $(document).on("click", "#greengem", function() {
+    var num = parseInt($(this).attr("data-random-number"));
+    previous += num;
+    console.log(previous);
+    $("#spaceBag").html("Crystals in your spacebag: " + previous);
+  });
+
+  $(document).on("click", "#purplegem", function() {
+    var num = parseInt($(this).attr("data-random-number"));
+    previous += num;
+    console.log(previous);
+    $("#spaceBag").html("Crystals in your spacebag: " + previous);
+  });
+
+  $(document).on("click", "#redgem", function() {
+    var num = parseInt($(this).attr("data-random-number"));
+    previous += num;
+    console.log(previous);
+    $("#spaceBag").html("Crystals in your spacebag: " + previous);
+  });
+
+  //Lose & Win Counters
+
+  if (previous > randResult) {
+    losses++;
+    console.log("You lost!");
+    $("#losses").text("Unsucessful Mining Days " + losses);
+
+    init();
+  } 
+  else if (previous === randResult) {
+    wins++;
+    console.log("You Win!")
+    $("#wins").text("Sucessful Mining Days " + wins);
+
+    init();
+  }
+});
