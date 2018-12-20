@@ -1,10 +1,10 @@
 // =================PSEUDO CODE===================================================================================
 // Start with 4 crystals DONE
 // Every crystal needs to be assigned a random number between 1-12 DONE
-// When any crystal is clicked, its value should be adding to the previous number until it matches the total.
-// if it is greater than total, then we increment the loss counter; then reset
-// If it is equal, then add one win to the win counter, then reset
-// A new number needs to be generated to each crystal every time user Wins or Loses
+// When any crystal is clicked, its value should be adding to the previous number until it matches the total. DONE
+// if it is greater than total, then we increment the loss counter; then reset DONE
+// If it is equal, then add one win to the win counter, then reset DONE
+// A new number needs to be generated to each crystal every time user Wins or Loses DONE
 $(document).ready(function() {
   //==================GLOBAL VARIABLES===============================================================================
   var randResult;
@@ -35,6 +35,24 @@ $(document).ready(function() {
     $("#redgem").attr("data-random-number", random4);
   }
 
+  //Lose & Win Counters
+  function checkWinLosses() {
+    console.log(previous);
+    console.log(randResult);
+    if (previous > randResult) {
+      losses++;
+      //console.log("You lost!");
+      $("#losses").text("Unsucessful Mining Days " + losses);
+
+      init();
+    } else if (previous === randResult) {
+      wins++;
+      //console.log("You Win!");
+      $("#wins").text("Sucessful Mining Days " + wins);
+
+      init();
+    }
+  }
   init();
 
   //User Click
@@ -42,44 +60,32 @@ $(document).ready(function() {
   $(document).on("click", "#bluegem", function() {
     var num = parseInt($(this).attr("data-random-number"));
     previous += num;
-    console.log(previous);
+    //console.log(previous);
     $("#spaceBag").html("Crystals in your spacebag: " + previous);
+    checkWinLosses();
   });
 
   $(document).on("click", "#greengem", function() {
     var num = parseInt($(this).attr("data-random-number"));
     previous += num;
-    console.log(previous);
+    //console.log(previous);
     $("#spaceBag").html("Crystals in your spacebag: " + previous);
+    checkWinLosses();
   });
 
   $(document).on("click", "#purplegem", function() {
     var num = parseInt($(this).attr("data-random-number"));
     previous += num;
-    console.log(previous);
+    //console.log(previous);
     $("#spaceBag").html("Crystals in your spacebag: " + previous);
+    checkWinLosses();
   });
 
   $(document).on("click", "#redgem", function() {
     var num = parseInt($(this).attr("data-random-number"));
     previous += num;
-    console.log(previous);
+    //console.log(previous);
     $("#spaceBag").html("Crystals in your spacebag: " + previous);
+    checkWinLosses();
   });
-
-  //Lose & Win Counters
-
-  if (previous > randResult) {
-    losses++;
-    //console.log("You lost!");
-    $("#losses").text("Unsucessful Mining Days " + losses);
-
-    init();
-  } else if (previous === randResult) {
-    wins++;
-    console.log("You Win!");
-    $("#wins").text("Sucessful Mining Days " + wins);
-
-    init();
-  }
 });
