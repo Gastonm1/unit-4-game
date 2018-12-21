@@ -51,7 +51,6 @@ $(document).ready(function() {
       $("#wins").text("Sucessful Mining Days " + wins);
       previous = 0;
       init();
-
     }
   }
   init();
