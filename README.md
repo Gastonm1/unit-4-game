@@ -20,7 +20,7 @@ Every Win and Loss will be counted for.
 
 When the game is restarted, the crystals will have a different numerical values and a different random number to achieve.
 
-#Technologies in use
+# Technologies in use
 * HTML5
 * CSS3
 * JavaScript
